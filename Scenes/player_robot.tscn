@@ -1,7 +1,8 @@
-[gd_scene load_steps=35 format=3 uid="uid://rtvfanbpbqhb"]
+[gd_scene load_steps=36 format=3 uid="uid://rtvfanbpbqhb"]
 
 [ext_resource type="Script" uid="uid://v2y1tra2qfw3" path="res://Scripts/player_robot.gd" id="1_37otg"]
 [ext_resource type="Texture2D" uid="uid://b6x3ovmt8pomj" path="res://Assets/InfantryRobot/robot.png" id="2_37otg"]
+[ext_resource type="Texture2D" uid="uid://ctlxtxw75arei" path="res://Assets/Tilesets/light.png" id="3_ck235"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ck235"]
 atlas = ExtResource("2_37otg")
@@ -260,3 +261,10 @@ animation = &"dead"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -34.25)
 shape = SubResource("RectangleShape2D_3pyys")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(1, -47)
+color = Color(0.985403, 0.99213, 1, 1)
+energy = 0.8
+texture = ExtResource("3_ck235")
+texture_scale = 0.7
