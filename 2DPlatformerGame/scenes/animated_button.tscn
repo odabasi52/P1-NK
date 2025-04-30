@@ -1,0 +1,85 @@
+[gd_scene load_steps=7 format=3 uid="uid://c8qs28yry40um"]
+
+[ext_resource type="Theme" uid="uid://cwcw4wt01d6y0" path="res://resource/theme.tres" id="1_y1qn5"]
+[ext_resource type="Script" uid="uid://cp6enb10844cs" path="res://scripts/animated_button.gd" id="2_yud13"]
+
+[sub_resource type="Animation" id="Animation_y1qn5"]
+resource_name = "hover"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:custom_minimum_size")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(96, 24), Vector2(112, 24)]
+}
+
+[sub_resource type="Animation" id="Animation_yud13"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:custom_minimum_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(96, 24)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_50nt2"]
+resource_name = "click"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0872665, 0.0523599, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yud13"]
+_data = {
+&"RESET": SubResource("Animation_yud13"),
+&"click": SubResource("Animation_50nt2"),
+&"hover": SubResource("Animation_y1qn5")
+}
+
+[node name="AnimatedButton" type="Button"]
+custom_minimum_size = Vector2(96, 24)
+offset_right = 96.0
+offset_bottom = 28.0
+pivot_offset = Vector2(48, 12)
+size_flags_horizontal = 4
+theme = ExtResource("1_y1qn5")
+text = "TEST"
+script = ExtResource("2_yud13")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_yud13")
+}

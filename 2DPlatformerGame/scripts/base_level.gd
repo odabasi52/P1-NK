@@ -28,7 +28,6 @@ func coin_total_changed(newTotal):
 func coin_collect():
 	collectedCoins += 1
 	emit_signal("collected_coin_changed", totalCoins, collectedCoins)
-	print(str(totalCoins)+"/"+ str(collectedCoins))
 
 func register_player(player):
 	currentPlayerNode = player

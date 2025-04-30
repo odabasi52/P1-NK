@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://duvwi5q0f2qu2"]
+
+[ext_resource type="PackedScene" uid="uid://c8qs28yry40um" path="res://scenes/animated_button.tscn" id="1_errlg"]
+
+[node name="VBoxContainer" type="VBoxContainer"]
+custom_minimum_size = Vector2(112, 0)
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AnimatedButton" parent="." instance=ExtResource("1_errlg")]
+layout_mode = 2
+
+[node name="AnimatedButton2" parent="." instance=ExtResource("1_errlg")]
+layout_mode = 2
