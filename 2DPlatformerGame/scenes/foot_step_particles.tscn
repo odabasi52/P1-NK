@@ -1,0 +1,112 @@
+[gd_scene load_steps=11 format=3 uid="uid://dl845ua410qyh"]
+
+[ext_resource type="Texture2D" uid="uid://cmcuwx5b4qvqo" path="res://assets/effects/particles.png" id="1_lcaih"]
+
+[sub_resource type="Animation" id="Animation_lcaih"]
+resource_name = "default"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GPUParticles2D:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_rqob8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GPUParticles2D:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rqob8"]
+_data = {
+&"RESET": SubResource("Animation_rqob8"),
+&"default": SubResource("Animation_lcaih")
+}
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_lcaih"]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_lcaih"]
+offsets = PackedFloat32Array(0, 0.48773, 1)
+colors = PackedColorArray(0.996078, 0.988235, 1, 0.745098, 1, 0.992157, 1, 0.321569, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_rqob8"]
+gradient = SubResource("Gradient_lcaih")
+
+[sub_resource type="Curve" id="Curve_lcaih"]
+_data = [Vector2(0, 0.0122906), 0.0, 0.0, 0, 0, Vector2(0.164706, 0.977299), 0.0, 0.0, 0, 0, Vector2(0.558824, 0.984866), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_rqob8"]
+curve = SubResource("Curve_lcaih")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_lcaih"]
+lifetime_randomness = 0.5
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(3, 3, 1)
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector3(0, 1, 0)
+initial_velocity_min = 5.0
+initial_velocity_max = 6.0
+angular_velocity_min = -1.60933e-05
+angular_velocity_max = 180.0
+gravity = Vector3(0, -20, 0)
+scale_min = 1.4
+scale_max = 2.0
+scale_curve = SubResource("CurveTexture_rqob8")
+color_ramp = SubResource("GradientTexture1D_rqob8")
+anim_offset_min = 1.0
+anim_offset_max = 1.0
+
+[node name="FootStepParticles" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_rqob8")
+}
+autoplay = "default"
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+modulate = Color(1, 1, 1, 0.619608)
+material = SubResource("CanvasItemMaterial_lcaih")
+emitting = false
+amount = 2
+texture = ExtResource("1_lcaih")
+lifetime = 0.8
+one_shot = true
+explosiveness = 0.9
+process_material = SubResource("ParticleProcessMaterial_lcaih")

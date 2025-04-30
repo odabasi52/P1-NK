@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 var playerDeath = preload("res://scenes/player_death.tscn")
+var footStepParticles = preload("res://scenes/foot_step_particles.tscn")
 
 enum State{NORMAL, DASHING}
 signal died
@@ -16,10 +17,11 @@ var hasDash = false
 var currentState = State.NORMAL
 var stateChanged = false
 var isDying = false
+var isStateNew = true
 
 func _ready():
 	$DyingArea.area_entered.connect(self.on_spike_entered)
-		
+	$AnimatedSprite2D.connect("frame_changed", Callable(self, "on_animated_sprite_frame_changed"))	
 	#spike dying area
 	$DyingArea.set_collision_mask_value(31, true)
 	
@@ -85,6 +87,8 @@ func state_normal(delta):
 	
 	if wasOnFloor and not is_on_floor():
 		$CoyoteTimer.start()
+	if (!wasOnFloor) and is_on_floor() and not isStateNew:
+		spawn_footsteps(2)
 	
 	if is_on_floor():
 		hasDoubleJump = true
@@ -96,6 +100,7 @@ func state_normal(delta):
 		hasDash = false
 	
 	update_animation()
+	isStateNew = false
 	
 	
 func get_move_vector():
@@ -132,3 +137,12 @@ func on_spike_entered(area2d):
 	$"/root/Helpers".apply_camera_shake(1)
 	call_deferred("call_on_died")
 	
+func spawn_footsteps(scale = 1):
+	var footstep = footStepParticles.instantiate()
+	get_parent().add_child(footstep)
+	footstep.scale = Vector2.ONE * scale
+	footstep.global_position = global_position
+
+func on_animated_sprite_frame_changed():
+	if ($AnimatedSprite2D.animation == "run" and $AnimatedSprite2D.frame == 0):
+		spawn_footsteps()

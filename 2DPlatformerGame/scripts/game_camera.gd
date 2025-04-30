@@ -6,8 +6,8 @@ var playerPos = Vector2.ZERO
 
 var xNoisePos = Vector2.ZERO
 var yNoisePos = Vector2.ZERO
-var noiseLevel = 500
-var maxShakeOffset = 10
+var noiseLevel = 200
+var maxShakeOffset = 5
 var currentShakePercentage = 0
 
 func apply_shake(percentage):

@@ -16,6 +16,3 @@ func change_scene(scene_index):
 		next_scene = scene_index
 		
 	get_tree().change_scene_to_file(level_scenes[next_scene].resource_path)
-
-func _process(delta):
-	pass

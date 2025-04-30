@@ -47,11 +47,10 @@ _data = {
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 position = Vector2(0, -12)
-emitting = false
 amount = 1
+texture = ExtResource("1_wgtaj")
 lifetime = 0.75
 one_shot = true
-texture = ExtResource("1_wgtaj")
 direction = Vector2(0, -1)
 spread = 30.0
 gravity = Vector2(0, 1000)
@@ -62,7 +61,7 @@ angular_velocity_max = 300.0
 scale_amount_curve = SubResource("Curve_p52oi")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "enemy_death"
 libraries = {
-"": SubResource("AnimationLibrary_rgt2g")
+&"": SubResource("AnimationLibrary_rgt2g")
 }
+autoplay = "enemy_death"

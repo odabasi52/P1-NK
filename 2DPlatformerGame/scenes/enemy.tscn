@@ -153,7 +153,7 @@ frame_progress = 0.897859
 offset = Vector2(0, -12)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "enemy_spawn"
 libraries = {
-"": SubResource("AnimationLibrary_bpr7y")
+&"": SubResource("AnimationLibrary_bpr7y")
 }
+autoplay = "enemy_spawn"

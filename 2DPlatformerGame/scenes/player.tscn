@@ -68,8 +68,8 @@ material = SubResource("ShaderMaterial_e87xa")
 position = Vector2(0, -12)
 emitting = false
 amount = 15
-lifetime = 0.15
 texture = ExtResource("2_wtifx")
+lifetime = 0.15
 gravity = Vector2(0, 0)
 scale_amount_curve = SubResource("Curve_2ufky")
 

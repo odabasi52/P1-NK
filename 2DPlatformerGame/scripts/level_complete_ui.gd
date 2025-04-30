@@ -6,4 +6,3 @@ func _ready():
 
 func on_pressed():
 	$"/root/LevelManager".next_level()
-
