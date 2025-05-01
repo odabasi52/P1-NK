@@ -3,7 +3,7 @@ extends CharacterBody2D
 var playerDeath = preload("res://scenes/player_death.tscn")
 var footStepParticles = preload("res://scenes/foot_step_particles.tscn")
 
-enum State{NORMAL, DASHING}
+enum State{NORMAL, DASHING, INPUT_DISABLED}
 signal died
 var gravity = 1500
 var maxSpeed = 120
@@ -33,8 +33,17 @@ func _process(delta):
 			state_normal(delta)
 		State.DASHING:
 			state_dashing(delta)
+		State.INPUT_DISABLED:
+			state_disabled(delta)
 	stateChanged = false
 	
+func state_disabled(delta):
+	if (!isStateNew):
+		$AnimatedSprite2D.play("idle")
+	velocity.x = lerpf(0, velocity.x, pow(2, -30*delta))
+	velocity.y += gravity * delta
+	move_and_slide()
+
 func change_state(newState):
 	currentState = newState
 	stateChanged = true
@@ -146,3 +155,6 @@ func spawn_footsteps(scale = 1):
 func on_animated_sprite_frame_changed():
 	if ($AnimatedSprite2D.animation == "run" and $AnimatedSprite2D.frame == 0):
 		spawn_footsteps()
+
+func disable_player_input():
+	change_state(State.INPUT_DISABLED)

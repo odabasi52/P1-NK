@@ -4,6 +4,7 @@ extends CanvasLayer
 
 func _ready() -> void:
 	exit_button.connect("pressed", Callable(self, "on_exit_pressed"))
-
+	$"/root/MouseCursor".visible = true
+	
 func on_exit_pressed():
 	$"/root/ScreenTransitionManager".transition_to_menu()

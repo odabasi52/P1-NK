@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cxb2h18pq5pkc"]
+[gd_scene load_steps=12 format=3 uid="uid://cxb2h18pq5pkc"]
 
 [ext_resource type="Texture2D" uid="uid://dibstrgm5n776" path="res://assets/flag/tile_0131.png" id="1_ip2gl"]
 [ext_resource type="Script" uid="uid://cdphioe2cw5u1" path="res://scripts/flag.gd" id="1_k7r1j"]
 [ext_resource type="Texture2D" uid="uid://cu2cdljnlh1ep" path="res://assets/flag/tile_0111.png" id="2_jtc66"]
 [ext_resource type="Texture2D" uid="uid://cmbq4yv76anbi" path="res://assets/flag/tile_0112.png" id="3_jmp4h"]
+[ext_resource type="Texture2D" uid="uid://djr215aijwkp2" path="res://assets/effects/confetti.png" id="5_s5mf2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rn6jj"]
 animations = [{
@@ -21,6 +22,39 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d223g"]
 size = Vector2(20, 52.3077)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_tjkec"]
+particles_animation = true
+particles_anim_h_frames = 2
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="Curve" id="Curve_s5mf2"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.0855457, 1), 0.0, 0.0, 0, 0, Vector2(0.294985, 0.890695), 0.0, 0.0, 0, 0, Vector2(0.99999, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_s5mf2"]
+curve = SubResource("Curve_s5mf2")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_s5mf2"]
+lifetime_randomness = 0.5
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 10.0
+direction = Vector3(0, -1, 0)
+spread = 30.0
+initial_velocity_min = 100.0
+initial_velocity_max = 130.0
+angular_velocity_min = -1.60933e-05
+angular_velocity_max = 180.0
+gravity = Vector3(0, 100, 0)
+scale_max = 2.0
+scale_curve = SubResource("CurveTexture_s5mf2")
+color = Color(1, 0.357326, 0.290209, 1)
+hue_variation_min = -2.23517e-08
+hue_variation_max = 1.0
+anim_speed_min = 5.0
+anim_speed_max = 10.0
 
 [node name="Flag" type="Node2D"]
 script = ExtResource("1_k7r1j")
@@ -44,3 +78,14 @@ collision_mask = 4
 position = Vector2(2, -68)
 scale = Vector2(1.28, 2.6)
 shape = SubResource("RectangleShape2D_d223g")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_tjkec")
+position = Vector2(-5, -8)
+emitting = false
+amount = 20
+texture = ExtResource("5_s5mf2")
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.9
+process_material = SubResource("ParticleProcessMaterial_s5mf2")

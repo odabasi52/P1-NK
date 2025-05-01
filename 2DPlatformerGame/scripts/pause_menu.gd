@@ -11,11 +11,13 @@ func _ready() -> void:
 	setting_button.connect("pressed", Callable(self, "on_settings_pressed"))
 	exit_button.connect("pressed", Callable(self, "on_exit_pressed"))
 	get_tree().paused = true
+	$"/root/MouseCursor".visible = true
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("Pause"):
 		unpause()
 		get_viewport().set_input_as_handled()
+		$"/root/MouseCursor".visible = false
 
 func unpause():
 	queue_free()
@@ -23,6 +25,7 @@ func unpause():
 
 func on_continue_pressed():
 	unpause()
+	$"/root/MouseCursor".visible = false
 	
 func on_settings_pressed():
 	$MarginContainer.visible = false

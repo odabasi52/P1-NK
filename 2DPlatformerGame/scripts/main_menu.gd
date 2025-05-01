@@ -13,6 +13,7 @@ func _ready() -> void:
 
 func on_play_pressed():
 	$"/root/LevelManager".change_scene(0)
+	$"/root/MouseCursor".visible = false
 	
 func on_exit_pressed():
 	get_tree().quit()

@@ -27,12 +27,12 @@ func _unhandled_input(event: InputEvent) -> void:
 		add_child(pause_instance)
 
 func on_finish():
-	currentPlayerNode.queue_free()
+	currentPlayerNode.disable_player_input()
 	var completed_menu = completed_menu_scene.instantiate()
 	self.add_child(completed_menu)
 
 func on_win():
-	currentPlayerNode.queue_free()
+	currentPlayerNode.disable_player_input()
 	var level_complete = level_complete_scene.instantiate()
 	self.add_child(level_complete)
 

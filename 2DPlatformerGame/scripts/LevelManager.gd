@@ -7,6 +7,9 @@ func next_level():
 	current_level_index += 1
 	change_scene(current_level_index)
 
+func current_level():
+	change_scene(current_level_index)
+
 func change_scene(scene_index):
 	var next_scene = null
 	
