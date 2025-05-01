@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bxjyrnlj0jvl0"]
+[gd_scene load_steps=11 format=3 uid="uid://bxjyrnlj0jvl0"]
 
 [ext_resource type="Texture2D" uid="uid://gk2l77x54geh" path="res://assets/tiles/tiles_packed.png" id="1_804bt"]
 [ext_resource type="Script" uid="uid://hbwq8hthttuq" path="res://scripts/base_level.gd" id="1_p0hh6"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c2ptoo1hj5okl" path="res://scenes/game_camera.tscn" id="3_pf034"]
 [ext_resource type="PackedScene" uid="uid://bdirpb4p8dck1" path="res://scenes/clouds.tscn" id="4_rlct4"]
 [ext_resource type="PackedScene" uid="uid://cxb2h18pq5pkc" path="res://scenes/flag.tscn" id="5_xqy7x"]
+[ext_resource type="PackedScene" uid="uid://bp3iqu1vsmi1o" path="res://scenes/space_ship.tscn" id="8_earhg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rlct4"]
 texture = ExtResource("1_804bt")
@@ -232,3 +233,7 @@ layer_0/tile_data = PackedInt32Array(-131070, 720896, 2)
 [node name="Player" parent="." instance=ExtResource("2_cj42p")]
 
 [node name="Flag" parent="." instance=ExtResource("5_xqy7x")]
+
+[node name="Node" type="Node" parent="."]
+
+[node name="SpaceShip" parent="." instance=ExtResource("8_earhg")]

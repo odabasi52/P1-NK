@@ -4,6 +4,8 @@ signal collected_coin_changed
 
 var level_complete_scene = preload("res://scenes/UI/level_complete_ui.tscn")
 var player_scene = preload("res://scenes/player.tscn")
+var pause_menu_scene = preload("res://scenes/UI/pause_menu.tscn")
+var completed_menu_scene = preload("res://scenes/UI/game_complete.tscn")
 
 var spawnPos = Vector2.ZERO
 var currentPlayerNode = null
@@ -14,7 +16,20 @@ func _ready():
 	spawnPos = $Player.global_position
 	register_player($Player)
 	coin_total_changed(get_tree().get_nodes_in_group("coin").size())
-	$Flag.player_won.connect(self.on_win)
+	if $Flag.visible:
+		$Flag.player_won.connect(self.on_win)
+	if $SpaceShip.visible:
+		$SpaceShip.game_finished.connect(self.on_finish)
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("Pause"):
+		var pause_instance = pause_menu_scene.instantiate()
+		add_child(pause_instance)
+
+func on_finish():
+	currentPlayerNode.queue_free()
+	var completed_menu = completed_menu_scene.instantiate()
+	self.add_child(completed_menu)
 
 func on_win():
 	currentPlayerNode.queue_free()

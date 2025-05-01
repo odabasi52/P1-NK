@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cm6jia0t74bfo"]
+[gd_scene load_steps=12 format=3 uid="uid://cm6jia0t74bfo"]
 
 [ext_resource type="PackedScene" uid="uid://c8qs28yry40um" path="res://scenes/animated_button.tscn" id="1_qwnig"]
 [ext_resource type="Script" uid="uid://bya6xo7163h0u" path="res://scripts/main_menu.gd" id="1_yonvy"]
@@ -6,6 +6,44 @@
 [ext_resource type="PackedScene" uid="uid://bdirpb4p8dck1" path="res://scenes/clouds.tscn" id="3_ngj32"]
 [ext_resource type="Texture2D" uid="uid://gk2l77x54geh" path="res://assets/tiles/tiles_packed.png" id="4_bm8t2"]
 [ext_resource type="Theme" uid="uid://cwcw4wt01d6y0" path="res://resource/theme.tres" id="5_ngj32"]
+
+[sub_resource type="Animation" id="Animation_ngj32"]
+resource_name = "default"
+length = 0.4
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_bm8t2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bm8t2"]
+_data = {
+&"RESET": SubResource("Animation_bm8t2"),
+&"default": SubResource("Animation_ngj32")
+}
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5d4ag"]
 texture = ExtResource("4_bm8t2")
@@ -210,6 +248,12 @@ sources/0 = SubResource("TileSetAtlasSource_5d4ag")
 [node name="MainMenu" type="CanvasLayer"]
 script = ExtResource("1_yonvy")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_bm8t2")
+}
+autoplay = "default"
+
 [node name="GameCamera" parent="." instance=ExtResource("2_e2p27")]
 position = Vector2(163, 91)
 
@@ -227,6 +271,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(160, 90)
 theme = ExtResource("5_ngj32")
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]

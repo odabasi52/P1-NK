@@ -14,5 +14,5 @@ func change_scene(scene_index):
 		next_scene = 0
 	else:
 		next_scene = scene_index
-		
-	get_tree().change_scene_to_file(level_scenes[next_scene].resource_path)
+	
+	$"/root/ScreenTransitionManager".transition_to_scene(level_scenes[next_scene].resource_path)

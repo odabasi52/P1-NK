@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bdirpb4p8dck1"]
 
-[ext_resource type="Texture2D" uid="uid://dk7wmcpxdt023" path="res://assets/clouds/clouds.png" id="1_p445k"]
+[ext_resource type="Texture2D" uid="uid://dk7wmcpxdt023" path="res://assets/effects/clouds.png" id="1_p445k"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_v7ppl"]
 particles_animation = true

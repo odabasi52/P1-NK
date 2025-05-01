@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=3 uid="uid://bp3iqu1vsmi1o"]
+
+[ext_resource type="Script" uid="uid://f3y3n0kd3f2w" path="res://scripts/space_ship.gd" id="1_bt5oy"]
+[ext_resource type="Texture2D" uid="uid://5r1t84w2hk55" path="res://assets/SpaceShip/ship.png" id="1_dp8cb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dp8cb"]
+atlas = ExtResource("1_dp8cb")
+region = Rect2(0, 0, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bt5oy"]
+atlas = ExtResource("1_dp8cb")
+region = Rect2(16, 0, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jy7xo"]
+atlas = ExtResource("1_dp8cb")
+region = Rect2(32, 0, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0g6o"]
+atlas = ExtResource("1_dp8cb")
+region = Rect2(48, 0, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4246p"]
+atlas = ExtResource("1_dp8cb")
+region = Rect2(64, 0, 16, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ivtut"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dp8cb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bt5oy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jy7xo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0g6o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4246p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n8dcg"]
+size = Vector2(34.375, 45)
+
+[node name="SpaceShip" type="Node2D"]
+script = ExtResource("1_bt5oy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, -27)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_ivtut")
+autoplay = "default"
+frame = 3
+frame_progress = 0.0337316
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(3, -58.5)
+scale = Vector2(1.28, 2.6)
+shape = SubResource("RectangleShape2D_n8dcg")

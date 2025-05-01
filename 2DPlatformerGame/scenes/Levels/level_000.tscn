@@ -11,4 +11,8 @@ layer_0/tile_data = PackedInt32Array(196614, 131072, 11, 65542, 131072, 10, 6, 1
 position = Vector2(0, 3)
 
 [node name="Flag" parent="." index="7"]
-position = Vector2(110, -1)
+position = Vector2(109, 2)
+
+[node name="SpaceShip" parent="." index="9"]
+visible = false
+position = Vector2(64, 2)

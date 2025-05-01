@@ -55,6 +55,7 @@ size = Vector2(12, 17)
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vxcf0"]
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
+z_index = 10
 collision_layer = 0
 script = ExtResource("1_auknh")
 
