@@ -234,6 +234,4 @@ layer_0/tile_data = PackedInt32Array(-131070, 720896, 2)
 
 [node name="Flag" parent="." instance=ExtResource("5_xqy7x")]
 
-[node name="Node" type="Node" parent="."]
-
 [node name="SpaceShip" parent="." instance=ExtResource("8_earhg")]

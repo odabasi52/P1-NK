@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bq8r014mtkomj"]
 
 [ext_resource type="Script" uid="uid://co4v4thavigeu" path="res://scripts/screen_transitions.gd" id="1_6ppvb"]
-[ext_resource type="Shader" uid="uid://bbaab56s65iu4" path="res://scripts/screen_transitions.gdshader" id="1_qoodp"]
+[ext_resource type="Shader" uid="uid://bbaab56s65iu4" path="res://resource/screen_transitions.gdshader" id="1_qoodp"]
 [ext_resource type="Texture2D" uid="uid://dogwbudvwqs5w" path="res://assets/effects/screen-wipe.png" id="2_vayh6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wwvoh"]
