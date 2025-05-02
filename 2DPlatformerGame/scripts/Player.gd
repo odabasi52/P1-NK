@@ -151,6 +151,7 @@ func spawn_footsteps(scale = 1):
 	get_parent().add_child(footstep)
 	footstep.scale = Vector2.ONE * scale
 	footstep.global_position = global_position
+	$FootStepAudioPlayer.play()
 
 func on_animated_sprite_frame_changed():
 	if ($AnimatedSprite2D.animation == "run" and $AnimatedSprite2D.frame == 0):
