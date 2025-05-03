@@ -1,10 +1,17 @@
-[gd_scene load_steps=12 format=3 uid="uid://cxb2h18pq5pkc"]
+[gd_scene load_steps=19 format=3 uid="uid://cxb2h18pq5pkc"]
 
 [ext_resource type="Texture2D" uid="uid://dibstrgm5n776" path="res://assets/flag/tile_0131.png" id="1_ip2gl"]
 [ext_resource type="Script" uid="uid://cdphioe2cw5u1" path="res://scripts/flag.gd" id="1_k7r1j"]
+[ext_resource type="AudioStream" uid="uid://b5klf6k26ls6r" path="res://assets/Sounds/curated_sounds/jingles_PIZZI10.ogg" id="2_7kq5u"]
 [ext_resource type="Texture2D" uid="uid://cu2cdljnlh1ep" path="res://assets/flag/tile_0111.png" id="2_jtc66"]
 [ext_resource type="Texture2D" uid="uid://cmbq4yv76anbi" path="res://assets/flag/tile_0112.png" id="3_jmp4h"]
+[ext_resource type="PackedScene" uid="uid://rwujr72pywjw" path="res://scenes/Sound/random_audio_stream_player.tscn" id="3_msxbw"]
+[ext_resource type="AudioStream" uid="uid://dwfov1jb0lw6f" path="res://assets/Sounds/Audio/impactPlank_medium_000.ogg" id="4_suq27"]
 [ext_resource type="Texture2D" uid="uid://djr215aijwkp2" path="res://assets/effects/confetti.png" id="5_s5mf2"]
+[ext_resource type="AudioStream" uid="uid://yj0c6g518vx1" path="res://assets/Sounds/Audio/impactPlank_medium_001.ogg" id="5_s6cpg"]
+[ext_resource type="AudioStream" uid="uid://cqrs78enirf03" path="res://assets/Sounds/Audio/impactPlank_medium_002.ogg" id="6_qfyfp"]
+[ext_resource type="AudioStream" uid="uid://d1e08vwe306fj" path="res://assets/Sounds/Audio/impactPlank_medium_003.ogg" id="7_py37q"]
+[ext_resource type="AudioStream" uid="uid://0kkmwrjj7uk7" path="res://assets/Sounds/Audio/impactPlank_medium_004.ogg" id="8_4r2ai"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rn6jj"]
 animations = [{
@@ -58,6 +65,32 @@ anim_speed_max = 10.0
 
 [node name="Flag" type="Node2D"]
 script = ExtResource("1_k7r1j")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_7kq5u")
+bus = &"SFX"
+
+[node name="RandomAudioStreamPlayer" parent="." instance=ExtResource("3_msxbw")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="RandomAudioStreamPlayer"]
+stream = ExtResource("4_suq27")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="RandomAudioStreamPlayer"]
+stream = ExtResource("5_s6cpg")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="RandomAudioStreamPlayer"]
+stream = ExtResource("6_qfyfp")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="RandomAudioStreamPlayer"]
+stream = ExtResource("7_py37q")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="RandomAudioStreamPlayer"]
+stream = ExtResource("8_4r2ai")
+bus = &"SFX"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_ip2gl")

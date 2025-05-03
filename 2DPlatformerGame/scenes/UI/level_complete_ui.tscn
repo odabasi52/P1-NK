@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://cwcw4wt01d6y0" path="res://resource/theme.tres" id="1_5ec2b"]
 [ext_resource type="Script" uid="uid://bab31j3wpmvj7" path="res://scripts/level_complete_ui.gd" id="1_pbh8a"]
-[ext_resource type="PackedScene" uid="uid://c8qs28yry40um" path="res://scenes/animated_button.tscn" id="3_es5cs"]
+[ext_resource type="PackedScene" uid="uid://c8qs28yry40um" path="res://scenes/UI/animated_button.tscn" id="3_es5cs"]
 [ext_resource type="PackedScene" uid="uid://mdkhf7klj0at" path="res://scenes/UI/coin_counter.tscn" id="4_srpnx"]
 
 [sub_resource type="Animation" id="Animation_srpnx"]

@@ -9,6 +9,7 @@ func _process(delta: float) -> void:
 	pivot_offset = custom_minimum_size / 2
 
 func on_pressed():
+	$AudioStreamPlayer.play()
 	$AnimationPlayer.play("click")
 
 func on_mouse_entered():

@@ -7,6 +7,8 @@ func _ready():
 
 
 func on_win(area2d):
+	$RandomAudioStreamPlayer.play()
+	$AudioStreamPlayer.play()
 	emit_signal("player_won")
 	$"/root/Helpers".apply_camera_shake(0.6)
 	$GPUParticles2D.emitting = true

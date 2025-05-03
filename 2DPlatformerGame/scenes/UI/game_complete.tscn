@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://cwcw4wt01d6y0" path="res://resource/theme.tres" id="1_3novs"]
 [ext_resource type="Script" uid="uid://cler0sg4hkj1i" path="res://scripts/game_complete.gd" id="1_c6u4d"]
-[ext_resource type="PackedScene" uid="uid://c8qs28yry40um" path="res://scenes/animated_button.tscn" id="2_kgday"]
+[ext_resource type="PackedScene" uid="uid://c8qs28yry40um" path="res://scenes/UI/animated_button.tscn" id="2_kgday"]
 
 [sub_resource type="Animation" id="Animation_qnt17"]
 length = 0.001

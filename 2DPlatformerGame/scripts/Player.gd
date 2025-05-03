@@ -52,6 +52,7 @@ func state_dashing(delta):
 	var veloMod = 1 if $AnimatedSprite2D.flip_h else -1
 	
 	if stateChanged:
+		$DashAudioPlayer.play()
 		$DashParticle.emitting = true
 		$"/root/Helpers".apply_camera_shake(0.75)
 		velocity = Vector2(maxDashSpeed*veloMod, 0)

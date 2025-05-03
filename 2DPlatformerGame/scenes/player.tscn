@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://di0h5cr8yqw65"]
+[gd_scene load_steps=24 format=3 uid="uid://di0h5cr8yqw65"]
 
 [ext_resource type="Script" uid="uid://bjboesdd68dqr" path="res://scripts/Player.gd" id="1_auknh"]
 [ext_resource type="PackedScene" uid="uid://rwujr72pywjw" path="res://scenes/Sound/random_audio_stream_player.tscn" id="2_qlg0r"]
@@ -15,6 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://do7yiuc2k5ric" path="res://assets/Sounds/Audio/footstep_concrete_002.ogg" id="10_qfm1y"]
 [ext_resource type="AudioStream" uid="uid://b8jf3i6ubeqq4" path="res://assets/Sounds/Audio/footstep_concrete_003.ogg" id="11_fulsm"]
 [ext_resource type="AudioStream" uid="uid://fweh5xwheapy" path="res://assets/Sounds/Audio/footstep_concrete_004.ogg" id="12_4r5pv"]
+[ext_resource type="AudioStream" uid="uid://bindyjrtsksv8" path="res://assets/Sounds/Audio/impactBell_heavy_004.ogg" id="13_a8ls1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_e87xa"]
 shader = ExtResource("4_058d5")
@@ -122,6 +123,20 @@ bus = &"Footsteps"
 stream = ExtResource("12_4r5pv")
 volume_db = -2.0
 bus = &"Footsteps"
+
+[node name="DashAudioPlayer" parent="." instance=ExtResource("2_qlg0r")]
+numberToPlayer = 1
+enablePitchRandomization = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DashAudioPlayer"]
+stream = ExtResource("13_a8ls1")
+volume_db = -2.0
+bus = &"Dash"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="DashAudioPlayer"]
+stream = ExtResource("13_a8ls1")
+volume_db = -2.0
+bus = &"Dash"
 
 [node name="CoyoteTimer" type="Timer" parent="."]
 wait_time = 0.15

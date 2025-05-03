@@ -1,8 +1,15 @@
-[gd_scene load_steps=15 format=3 uid="uid://bp3iqu1vsmi1o"]
+[gd_scene load_steps=22 format=3 uid="uid://bp3iqu1vsmi1o"]
 
 [ext_resource type="Script" uid="uid://f3y3n0kd3f2w" path="res://scripts/space_ship.gd" id="1_bt5oy"]
 [ext_resource type="Texture2D" uid="uid://5r1t84w2hk55" path="res://assets/SpaceShip/ship.png" id="1_dp8cb"]
+[ext_resource type="AudioStream" uid="uid://b5klf6k26ls6r" path="res://assets/Sounds/curated_sounds/jingles_PIZZI10.ogg" id="2_n0g6o"]
+[ext_resource type="PackedScene" uid="uid://rwujr72pywjw" path="res://scenes/Sound/random_audio_stream_player.tscn" id="3_2irwy"]
 [ext_resource type="Texture2D" uid="uid://djr215aijwkp2" path="res://assets/effects/confetti.png" id="3_jy7xo"]
+[ext_resource type="AudioStream" uid="uid://dwfov1jb0lw6f" path="res://assets/Sounds/Audio/impactPlank_medium_000.ogg" id="4_jsyc8"]
+[ext_resource type="AudioStream" uid="uid://yj0c6g518vx1" path="res://assets/Sounds/Audio/impactPlank_medium_001.ogg" id="5_52yhn"]
+[ext_resource type="AudioStream" uid="uid://cqrs78enirf03" path="res://assets/Sounds/Audio/impactPlank_medium_002.ogg" id="6_tis3y"]
+[ext_resource type="AudioStream" uid="uid://d1e08vwe306fj" path="res://assets/Sounds/Audio/impactPlank_medium_003.ogg" id="7_m15i1"]
+[ext_resource type="AudioStream" uid="uid://0kkmwrjj7uk7" path="res://assets/Sounds/Audio/impactPlank_medium_004.ogg" id="8_w7cjs"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dp8cb"]
 atlas = ExtResource("1_dp8cb")
@@ -84,6 +91,33 @@ anim_speed_max = 10.0
 
 [node name="SpaceShip" type="Node2D"]
 script = ExtResource("1_bt5oy")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_n0g6o")
+volume_db = -5.0
+bus = &"SFX"
+
+[node name="RandomAudioStreamPlayer" parent="." instance=ExtResource("3_2irwy")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="RandomAudioStreamPlayer"]
+stream = ExtResource("4_jsyc8")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="RandomAudioStreamPlayer"]
+stream = ExtResource("5_52yhn")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="RandomAudioStreamPlayer"]
+stream = ExtResource("6_tis3y")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="RandomAudioStreamPlayer"]
+stream = ExtResource("7_m15i1")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="RandomAudioStreamPlayer"]
+stream = ExtResource("8_w7cjs")
+bus = &"SFX"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(2, -27)

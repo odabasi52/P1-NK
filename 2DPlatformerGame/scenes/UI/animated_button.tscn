@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://c8qs28yry40um"]
+[gd_scene load_steps=8 format=3 uid="uid://c8qs28yry40um"]
 
-[ext_resource type="Theme" uid="uid://cwcw4wt01d6y0" path="res://resource/theme.tres" id="1_y1qn5"]
-[ext_resource type="Script" uid="uid://cp6enb10844cs" path="res://scripts/animated_button.gd" id="2_yud13"]
+[ext_resource type="Theme" uid="uid://cwcw4wt01d6y0" path="res://resource/theme.tres" id="1_b1gc8"]
+[ext_resource type="Script" uid="uid://cp6enb10844cs" path="res://scripts/animated_button.gd" id="2_0nknd"]
+[ext_resource type="AudioStream" uid="uid://bdmqqctgt2u2u" path="res://assets/Sounds/curated_sounds/click_002.ogg" id="3_0nknd"]
 
 [sub_resource type="Animation" id="Animation_yud13"]
 length = 0.001
@@ -75,9 +76,12 @@ offset_right = 96.0
 offset_bottom = 28.0
 pivot_offset = Vector2(48, 12)
 size_flags_horizontal = 4
-theme = ExtResource("1_y1qn5")
+theme = ExtResource("1_b1gc8")
 text = "TEST"
-script = ExtResource("2_yud13")
+script = ExtResource("2_0nknd")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_0nknd")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

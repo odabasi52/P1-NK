@@ -1,8 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://ckl0c1pfn41sv"]
+[gd_scene load_steps=16 format=3 uid="uid://ckl0c1pfn41sv"]
 
 [ext_resource type="Script" uid="uid://d2lq0wr7lpvpq" path="res://scripts/coin.gd" id="1_ehs4y"]
 [ext_resource type="Texture2D" uid="uid://c6uy5hfy6prsq" path="res://assets/coin/tile_0151.png" id="1_viub2"]
+[ext_resource type="PackedScene" uid="uid://rwujr72pywjw" path="res://scenes/Sound/random_audio_stream_player.tscn" id="2_d14el"]
 [ext_resource type="Texture2D" uid="uid://db8x4528x0bxv" path="res://assets/coin/tile_0152.png" id="2_kpa7f"]
+[ext_resource type="AudioStream" uid="uid://b441xcpoo6qv3" path="res://assets/Sounds/curated_sounds/glass_004.ogg" id="3_1ikuy"]
+[ext_resource type="AudioStream" uid="uid://brcnq4yl188sy" path="res://assets/Sounds/Audio/impactGlass_heavy_000.ogg" id="4_jsmju"]
+[ext_resource type="AudioStream" uid="uid://bvu4076o554lt" path="res://assets/Sounds/Audio/impactGlass_heavy_001.ogg" id="5_s0mny"]
+[ext_resource type="AudioStream" uid="uid://cd4eujvnk1c7s" path="res://assets/Sounds/Audio/impactGlass_heavy_002.ogg" id="6_7cc30"]
+[ext_resource type="AudioStream" uid="uid://boq3gcyuqs1vh" path="res://assets/Sounds/Audio/impactGlass_heavy_003.ogg" id="7_rojmm"]
+[ext_resource type="AudioStream" uid="uid://i28kq8k71i47" path="res://assets/Sounds/Audio/impactGlass_heavy_004.ogg" id="8_ls27i"]
 
 [sub_resource type="Animation" id="Animation_6hsuw"]
 resource_name = "idle"
@@ -88,11 +95,51 @@ animations = [{
 [node name="Coin" type="Node2D" groups=["coin"]]
 script = ExtResource("1_ehs4y")
 
+[node name="RandomAudioStreamPlayer" parent="." instance=ExtResource("2_d14el")]
+numberToPlayer = 1
+minPitchScale = 0.8
+maxPitchScale = 1.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="RandomAudioStreamPlayer"]
+stream = ExtResource("3_1ikuy")
+volume_db = -10.0
+bus = &"SFX"
+
+[node name="RandomAudioStreamPlayer2" parent="." instance=ExtResource("2_d14el")]
+numberToPlayer = 1
+minPitchScale = 0.8
+maxPitchScale = 1.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="RandomAudioStreamPlayer2"]
+stream = ExtResource("4_jsmju")
+volume_db = -8.0
+bus = &"SFX"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="RandomAudioStreamPlayer2"]
+stream = ExtResource("5_s0mny")
+volume_db = -8.0
+bus = &"SFX"
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="RandomAudioStreamPlayer2"]
+stream = ExtResource("6_7cc30")
+volume_db = -8.0
+bus = &"SFX"
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="RandomAudioStreamPlayer2"]
+stream = ExtResource("7_rojmm")
+volume_db = -8.0
+bus = &"SFX"
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="RandomAudioStreamPlayer2"]
+stream = ExtResource("8_ls27i")
+volume_db = -8.0
+bus = &"SFX"
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "idle"
 libraries = {
-"": SubResource("AnimationLibrary_4dxj8")
+&"": SubResource("AnimationLibrary_4dxj8")
 }
+autoplay = "idle"
 
 [node name="Area2D" type="Area2D" parent="."]
 light_mask = 524288

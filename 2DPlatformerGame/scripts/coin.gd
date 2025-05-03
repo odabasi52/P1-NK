@@ -5,6 +5,8 @@ func _ready():
 	$Area2D.area_entered.connect(self.on_area_entered)
 
 func on_area_entered(area2d):
+	$RandomAudioStreamPlayer.play()
+	$RandomAudioStreamPlayer2.play()
 	$AnimationPlayer.play("pickup")
 	call_deferred("disable_area")
 	

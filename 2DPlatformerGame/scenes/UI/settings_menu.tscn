@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cgw25gwidiygi" path="res://scripts/settings_menu.gd" id="1_son7u"]
 [ext_resource type="Theme" uid="uid://cwcw4wt01d6y0" path="res://resource/theme.tres" id="1_yk8t3"]
-[ext_resource type="PackedScene" uid="uid://c8qs28yry40um" path="res://scenes/animated_button.tscn" id="2_son7u"]
+[ext_resource type="PackedScene" uid="uid://c8qs28yry40um" path="res://scenes/UI/animated_button.tscn" id="2_son7u"]
 
 [sub_resource type="Animation" id="Animation_feath"]
 length = 0.001
