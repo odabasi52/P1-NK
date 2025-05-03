@@ -76,52 +76,52 @@ numberToPlayer = 3
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="FootStepAudioPlayer"]
 stream = ExtResource("3_y4r1p")
-volume_db = -2.0
+volume_db = -3.0
 bus = &"Footsteps"
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="FootStepAudioPlayer"]
 stream = ExtResource("4_d2wvv")
-volume_db = -2.0
+volume_db = -3.0
 bus = &"Footsteps"
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="FootStepAudioPlayer"]
 stream = ExtResource("5_3v2ag")
-volume_db = -2.0
+volume_db = -3.0
 bus = &"Footsteps"
 
 [node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="FootStepAudioPlayer"]
 stream = ExtResource("6_jej6c")
-volume_db = -2.0
+volume_db = -3.0
 bus = &"Footsteps"
 
 [node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="FootStepAudioPlayer"]
 stream = ExtResource("7_f1ej7")
-volume_db = -2.0
+volume_db = -3.0
 bus = &"Footsteps"
 
 [node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="FootStepAudioPlayer"]
 stream = ExtResource("8_oprun")
-volume_db = -2.0
+volume_db = -3.0
 bus = &"Footsteps"
 
 [node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="FootStepAudioPlayer"]
 stream = ExtResource("9_a8ls1")
-volume_db = -2.0
+volume_db = -3.0
 bus = &"Footsteps"
 
 [node name="AudioStreamPlayer8" type="AudioStreamPlayer" parent="FootStepAudioPlayer"]
 stream = ExtResource("10_qfm1y")
-volume_db = -2.0
+volume_db = -3.0
 bus = &"Footsteps"
 
 [node name="AudioStreamPlayer9" type="AudioStreamPlayer" parent="FootStepAudioPlayer"]
 stream = ExtResource("11_fulsm")
-volume_db = -2.0
+volume_db = -3.0
 bus = &"Footsteps"
 
 [node name="AudioStreamPlayer10" type="AudioStreamPlayer" parent="FootStepAudioPlayer"]
 stream = ExtResource("12_4r5pv")
-volume_db = -2.0
+volume_db = -3.0
 bus = &"Footsteps"
 
 [node name="DashAudioPlayer" parent="." instance=ExtResource("2_qlg0r")]

@@ -159,27 +159,22 @@ maxPitchScale = 1.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DeathSoundPlayer1"]
 stream = ExtResource("3_fa3f8")
-volume_db = -2.0
 bus = &"SFX"
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="DeathSoundPlayer1"]
 stream = ExtResource("4_c8gm4")
-volume_db = -2.0
 bus = &"SFX"
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="DeathSoundPlayer1"]
 stream = ExtResource("5_ud5qv")
-volume_db = -2.0
 bus = &"SFX"
 
 [node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="DeathSoundPlayer1"]
 stream = ExtResource("6_2crs2")
-volume_db = -2.0
 bus = &"SFX"
 
 [node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="DeathSoundPlayer1"]
 stream = ExtResource("7_xv3wy")
-volume_db = -2.0
 bus = &"SFX"
 
 [node name="DeathSoundPlayer2" parent="." instance=ExtResource("4_nmitn")]
@@ -187,27 +182,22 @@ numberToPlayer = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DeathSoundPlayer2"]
 stream = ExtResource("8_wks23")
-volume_db = -2.0
 bus = &"SFX"
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="DeathSoundPlayer2"]
 stream = ExtResource("9_vi5ie")
-volume_db = -2.0
 bus = &"SFX"
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="DeathSoundPlayer2"]
 stream = ExtResource("10_dsdk8")
-volume_db = -2.0
 bus = &"SFX"
 
 [node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="DeathSoundPlayer2"]
 stream = ExtResource("11_ga46r")
-volume_db = -2.0
 bus = &"SFX"
 
 [node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="DeathSoundPlayer2"]
 stream = ExtResource("12_tdjpj")
-volume_db = -2.0
 bus = &"SFX"
 
 [node name="DeathSoundPlayer3" parent="." instance=ExtResource("4_nmitn")]
@@ -215,27 +205,27 @@ numberToPlayer = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DeathSoundPlayer3"]
 stream = ExtResource("13_84xak")
-volume_db = -5.0
+volume_db = -3.0
 bus = &"SFX"
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="DeathSoundPlayer3"]
 stream = ExtResource("14_i4fk7")
-volume_db = -5.0
+volume_db = -3.0
 bus = &"SFX"
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="DeathSoundPlayer3"]
 stream = ExtResource("15_g2fom")
-volume_db = -5.0
+volume_db = -3.0
 bus = &"SFX"
 
 [node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="DeathSoundPlayer3"]
 stream = ExtResource("16_b0ae2")
-volume_db = -5.0
+volume_db = -3.0
 bus = &"SFX"
 
 [node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="DeathSoundPlayer3"]
 stream = ExtResource("17_np4n7")
-volume_db = -5.0
+volume_db = -3.0
 bus = &"SFX"
 
 [node name="PoofSoundPlayer" parent="." instance=ExtResource("4_nmitn")]
@@ -243,27 +233,22 @@ numberToPlayer = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="PoofSoundPlayer"]
 stream = ExtResource("18_wks23")
-volume_db = -2.0
 bus = &"Puff"
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="PoofSoundPlayer"]
 stream = ExtResource("19_vi5ie")
-volume_db = -2.0
 bus = &"Puff"
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="PoofSoundPlayer"]
 stream = ExtResource("20_dsdk8")
-volume_db = -2.0
 bus = &"Puff"
 
 [node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="PoofSoundPlayer"]
 stream = ExtResource("21_ga46r")
-volume_db = -2.0
 bus = &"Puff"
 
 [node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="PoofSoundPlayer"]
 stream = ExtResource("22_tdjpj")
-volume_db = -2.0
 bus = &"Puff"
 
 [node name="Visuals" type="Node2D" parent="."]

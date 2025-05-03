@@ -11,12 +11,15 @@ func _ready():
 	$"/root/MouseCursor".visible = true
 	
 func on_pressed():
+	await get_tree().create_timer(0.1).timeout
 	$"/root/MouseCursor".visible = false
 	$"/root/LevelManager".next_level()
 
 func on_exit_pressed():
+	await get_tree().create_timer(0.1).timeout
 	$"/root/ScreenTransitionManager".transition_to_menu()
 
 func on_restart_pressed():
+	await get_tree().create_timer(0.1).timeout
 	$"/root/MouseCursor".visible = false
 	$"/root/LevelManager".current_level()

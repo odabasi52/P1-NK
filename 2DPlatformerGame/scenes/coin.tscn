@@ -102,7 +102,7 @@ maxPitchScale = 1.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="RandomAudioStreamPlayer"]
 stream = ExtResource("3_1ikuy")
-volume_db = -10.0
+volume_db = -8.0
 bus = &"SFX"
 
 [node name="RandomAudioStreamPlayer2" parent="." instance=ExtResource("2_d14el")]
@@ -112,27 +112,27 @@ maxPitchScale = 1.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="RandomAudioStreamPlayer2"]
 stream = ExtResource("4_jsmju")
-volume_db = -8.0
+volume_db = -5.0
 bus = &"SFX"
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="RandomAudioStreamPlayer2"]
 stream = ExtResource("5_s0mny")
-volume_db = -8.0
+volume_db = -5.0
 bus = &"SFX"
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="RandomAudioStreamPlayer2"]
 stream = ExtResource("6_7cc30")
-volume_db = -8.0
+volume_db = -5.0
 bus = &"SFX"
 
 [node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="RandomAudioStreamPlayer2"]
 stream = ExtResource("7_rojmm")
-volume_db = -8.0
+volume_db = -5.0
 bus = &"SFX"
 
 [node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="RandomAudioStreamPlayer2"]
 stream = ExtResource("8_ls27i")
-volume_db = -8.0
+volume_db = -5.0
 bus = &"SFX"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

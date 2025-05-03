@@ -84,52 +84,52 @@ autoplay = "enemy_death"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DeathAudioPlayer1"]
 stream = ExtResource("4_3h5gd")
-volume_db = -4.0
+volume_db = -2.0
 bus = &"SFX"
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="DeathAudioPlayer1"]
 stream = ExtResource("5_kakoq")
-volume_db = -4.0
+volume_db = -2.0
 bus = &"SFX"
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="DeathAudioPlayer1"]
 stream = ExtResource("6_k2e8w")
-volume_db = -4.0
+volume_db = -2.0
 bus = &"SFX"
 
 [node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="DeathAudioPlayer1"]
 stream = ExtResource("7_3igpk")
-volume_db = -4.0
+volume_db = -2.0
 bus = &"SFX"
 
 [node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="DeathAudioPlayer1"]
 stream = ExtResource("8_nybrq")
-volume_db = -4.0
+volume_db = -2.0
 bus = &"SFX"
 
 [node name="DeathAudioPlayer2" parent="." instance=ExtResource("3_w8rse")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DeathAudioPlayer2"]
 stream = ExtResource("9_toqjs")
-volume_db = -4.0
+volume_db = -2.0
 bus = &"SFX"
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="DeathAudioPlayer2"]
 stream = ExtResource("10_cbcja")
-volume_db = -4.0
+volume_db = -2.0
 bus = &"SFX"
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="DeathAudioPlayer2"]
 stream = ExtResource("11_kc6j4")
-volume_db = -4.0
+volume_db = -2.0
 bus = &"SFX"
 
 [node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="DeathAudioPlayer2"]
 stream = ExtResource("12_5ey1h")
-volume_db = -4.0
+volume_db = -2.0
 bus = &"SFX"
 
 [node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="DeathAudioPlayer2"]
 stream = ExtResource("13_wvb6a")
-volume_db = -4.0
+volume_db = -2.0
 bus = &"SFX"
