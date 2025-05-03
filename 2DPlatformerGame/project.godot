@@ -21,6 +21,7 @@ LevelManager="*res://scenes/level_manager.tscn"
 Helpers="*res://scripts/helpers.gd"
 ScreenTransitionManager="*res://scenes/UI/screen_transition_manager.tscn"
 MouseCursor="*res://scenes/UI/mouse_cursor.tscn"
+MusicPlayer="*res://scenes/Sound/music_player.tscn"
 
 [display]
 

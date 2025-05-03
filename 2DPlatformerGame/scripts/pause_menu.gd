@@ -24,20 +24,24 @@ func unpause():
 	get_tree().paused = false
 
 func on_continue_pressed():
+	await get_tree().create_timer(0.1).timeout
 	unpause()
 	$"/root/MouseCursor".visible = false
 	
 func on_settings_pressed():
+	await get_tree().create_timer(0.1).timeout
 	$MarginContainer.visible = false
 	var settings_menu_instance = settings_menu.instantiate()
 	add_child(settings_menu_instance)
 	settings_menu_instance.connect("back_pressed", Callable(self, "on_settings_back_pressed"))
 
 func on_settings_back_pressed():
+	await get_tree().create_timer(0.1).timeout
 	if $SettingsMenu:
 		$SettingsMenu.queue_free()
 		$MarginContainer.visible = true
 
 func on_exit_pressed():
+	await get_tree().create_timer(0.1).timeout
 	$"/root/ScreenTransitionManager".transition_to_menu()
 	unpause()

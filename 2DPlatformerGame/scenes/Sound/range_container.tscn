@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cj6vf8coemcy6"]
+
+[ext_resource type="Theme" uid="uid://cwcw4wt01d6y0" path="res://resource/theme.tres" id="1_afao4"]
+[ext_resource type="PackedScene" uid="uid://c8qs28yry40um" path="res://scenes/UI/animated_button.tscn" id="1_e0jaa"]
+[ext_resource type="Script" uid="uid://c2o5q7kfahbyi" path="res://scripts/range_container.gd" id="2_8o8bj"]
+
+[node name="RangeContainer" type="HBoxContainer"]
+size_flags_horizontal = 10
+theme = ExtResource("1_afao4")
+script = ExtResource("2_8o8bj")
+
+[node name="MinusButton" parent="." instance=ExtResource("1_e0jaa")]
+layout_mode = 2
+text = "-"
+disableHover = true
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(28, 0)
+layout_mode = 2
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlusButton" parent="." instance=ExtResource("1_e0jaa")]
+layout_mode = 2
+text = "+
+"
+disableHover = true
