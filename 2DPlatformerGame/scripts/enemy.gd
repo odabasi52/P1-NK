@@ -25,9 +25,8 @@ func _ready():
 
 func kill():
 	var death_instance = enemy_death_scene.instantiate()
-	get_parent().add_child(death_instance)
 	death_instance.global_position = self.global_position
-		
+	get_parent().add_child(death_instance)
 	queue_free()
 	
 func on_deatharea_entered(area2d):

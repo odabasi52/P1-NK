@@ -1,16 +1,25 @@
-[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://yo2sqepo7sqn"]
+[gd_resource type="AudioBusLayout" load_steps=4 format=3 uid="uid://yo2sqepo7sqn"]
 
 [sub_resource type="AudioEffectHighPassFilter" id="AudioEffectHighPassFilter_j3pel"]
 resource_name = "HighPassFilter"
 cutoff_hz = 300.0
 resonance = 0.25
 
+[sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_j3pel"]
+resource_name = "LowPassFilter"
+
+[sub_resource type="AudioEffectChorus" id="AudioEffectChorus_j3pel"]
+resource_name = "Chorus"
+dry = 0.4
+wet = 1.0
+voice/1/delay_ms = 50.0
+
 [resource]
 bus/1/name = &"SFX"
 bus/1/solo = false
 bus/1/mute = false
 bus/1/bypass_fx = false
-bus/1/volume_db = -0.130497
+bus/1/volume_db = 0.0
 bus/1/send = &"Master"
 bus/2/name = &"Music"
 bus/2/solo = false
@@ -26,3 +35,13 @@ bus/3/volume_db = 0.0
 bus/3/send = &"SFX"
 bus/3/effect/0/effect = SubResource("AudioEffectHighPassFilter_j3pel")
 bus/3/effect/0/enabled = true
+bus/4/name = &"Puff"
+bus/4/solo = false
+bus/4/mute = false
+bus/4/bypass_fx = false
+bus/4/volume_db = 0.0
+bus/4/send = &"Master"
+bus/4/effect/0/effect = SubResource("AudioEffectLowPassFilter_j3pel")
+bus/4/effect/0/enabled = true
+bus/4/effect/1/effect = SubResource("AudioEffectChorus_j3pel")
+bus/4/effect/1/enabled = true

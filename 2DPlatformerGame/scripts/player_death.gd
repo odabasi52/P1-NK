@@ -2,6 +2,11 @@ extends CharacterBody2D
 
 var flip_h = false
 
+func _ready() -> void:
+	$DeathSoundPlayer1.play()
+	$DeathSoundPlayer2.play()
+	$DeathSoundPlayer3.play()
+
 func _process(delta):	
 	$Visuals.scale.x = 1 if flip_h == false else -1
 	velocity.x = lerpf(0, velocity.x, pow(2, -5*delta))
