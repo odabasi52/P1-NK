@@ -36,6 +36,8 @@ func get_player_pos():
 	if players.size() > 0:
 		var player = players[0]
 		playerPos = player.global_position
+		playerPos.y-=40
+
 	elif deaths.size() > 0:
 		playerPos = deaths[deaths.size()-1].global_position
 	

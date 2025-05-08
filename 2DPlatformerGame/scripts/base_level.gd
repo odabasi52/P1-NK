@@ -11,6 +11,7 @@ var spawnPos = Vector2.ZERO
 var currentPlayerNode = null
 var totalCoins = 0
 var collectedCoins = 0
+var level_complete = null
 
 func _ready():
 	spawnPos = $Player.global_position
@@ -22,18 +23,18 @@ func _ready():
 		$SpaceShip.game_finished.connect(self.on_finish)
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("Pause"):
+	if event.is_action_pressed("Pause") and level_complete == null:
 		var pause_instance = pause_menu_scene.instantiate()
 		add_child(pause_instance)
 
 func on_finish():
 	currentPlayerNode.disable_player_input()
-	var completed_menu = completed_menu_scene.instantiate()
-	self.add_child(completed_menu)
+	level_complete = completed_menu_scene.instantiate()
+	self.add_child(level_complete)
 
 func on_win():
 	currentPlayerNode.disable_player_input()
-	var level_complete = level_complete_scene.instantiate()
+	level_complete = level_complete_scene.instantiate()
 	self.add_child(level_complete)
 
 func coin_total_changed(newTotal):
