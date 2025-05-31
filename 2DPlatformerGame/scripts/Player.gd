@@ -21,10 +21,13 @@ var isStateNew = true
 
 func _ready():
 	$DyingArea.area_entered.connect(self.on_spike_entered)
+	$Yapıs.area_entered.connect(self.on_yapıs_entered)
+	$Yapısma.area_entered.connect(self.on_yapıs_exited)
 	$AnimatedSprite2D.connect("frame_changed", Callable(self, "on_animated_sprite_frame_changed"))	
 	#spike dying area
 	$DyingArea.set_collision_mask_value(31, true)
-	
+	$Yapıs.set_collision_mask_value(4, true)
+	$Yapısma.set_collision_mask_value(5, true)
 	$DashArea/CollisionShape2D.disabled = true
 
 func _process(delta):
@@ -160,3 +163,14 @@ func on_animated_sprite_frame_changed():
 
 func disable_player_input():
 	change_state(State.INPUT_DISABLED)
+	
+func on_yapıs_entered(area2d):
+	jumpSpeed=0
+	maxDashSpeed=1
+	minDashSpeed=1
+	maxSpeed=90
+func on_yapıs_exited(area2d):
+	jumpSpeed=420
+	maxDashSpeed = 600
+	minDashSpeed = 200
+	maxSpeed=120

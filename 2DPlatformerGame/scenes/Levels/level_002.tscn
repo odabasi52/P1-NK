@@ -1,0 +1,637 @@
+[gd_scene load_steps=17 format=3 uid="uid://csuy127kk4ukl"]
+
+[ext_resource type="PackedScene" uid="uid://bxjyrnlj0jvl0" path="res://scenes/base_level.tscn" id="1_b5puf"]
+[ext_resource type="Texture2D" uid="uid://gk2l77x54geh" path="res://assets/tiles/tiles_packed.png" id="2_5o5fl"]
+[ext_resource type="PackedScene" uid="uid://ckl0c1pfn41sv" path="res://scenes/coin.tscn" id="3_2hbcr"]
+[ext_resource type="PackedScene" uid="uid://cn51gbw7vjrfx" path="res://scenes/enemy_spawner.tscn" id="4_1nqwv"]
+[ext_resource type="PackedScene" uid="uid://dr4ni07o1ju0l" path="res://scenes/enemy_goal.tscn" id="5_4qdmv"]
+[ext_resource type="PackedScene" uid="uid://33cdmkju1bvs" path="res://scenes/spikes.tscn" id="6_rhod4"]
+[ext_resource type="PackedScene" uid="uid://ddm7fckjm8g7r" path="res://scenes/yapıs.tscn" id="7_5o5fl"]
+[ext_resource type="PackedScene" uid="uid://b15fdmtasofs3" path="res://scenes/yapısma.tscn" id="8_2hbcr"]
+[ext_resource type="PackedScene" uid="uid://cnxi2n4jg77ji" path="res://scenes/tutorial_sign.tscn" id="9_1nqwv"]
+[ext_resource type="PackedScene" uid="uid://g423otvx6c6x" path="res://scenes/platform.tscn" id="10_4qdmv"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rhod4"]
+texture = ExtResource("2_5o5fl")
+texture_region_size = Vector2i(18, 18)
+0:9/0 = 0
+0:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+1:9/0 = 0
+1:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+2:9/0 = 0
+2:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+3:9/0 = 0
+3:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+4:9/0 = 0
+4:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+4:10/0 = 0
+4:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+3:10/0 = 0
+3:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+2:10/0 = 0
+2:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+2:11/0 = 0
+2:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+1:11/0 = 0
+1:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+1:10/0 = 0
+1:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+0:11/0 = 0
+0:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+0:10/0 = 0
+0:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+16:1/size_in_atlas = Vector2i(1, 6)
+16:1/0 = 0
+1:5/0 = 0
+1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+2:5/0 = 0
+2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+3:5/0 = 0
+3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+3:7/0 = 0
+3:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+3:6/0 = 0
+3:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+2:7/0 = 0
+2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+2:6/0 = 0
+2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+1:6/0 = 0
+1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+1:7/0 = 0
+1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+0:7/0 = 0
+0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+0:6/0 = 0
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+0:5/0 = 0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+2:4/0 = 0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+3:4/0 = 0
+3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+14:1/size_in_atlas = Vector2i(1, 3)
+14:1/0 = 0
+15:1/size_in_atlas = Vector2i(1, 3)
+15:1/0 = 0
+18:5/size_in_atlas = Vector2i(2, 1)
+18:5/0 = 0
+18:4/size_in_atlas = Vector2i(2, 1)
+18:4/0 = 0
+17:3/size_in_atlas = Vector2i(3, 1)
+17:3/0 = 0
+17:0/size_in_atlas = Vector2i(3, 3)
+17:0/0 = 0
+16:0/0 = 0
+17:4/size_in_atlas = Vector2i(1, 3)
+17:4/0 = 0
+18:6/size_in_atlas = Vector2i(2, 1)
+18:6/0 = 0
+14:4/0 = 0
+13:4/0 = 0
+14:5/0 = 0
+13:5/0 = 0
+15:4/size_in_atlas = Vector2i(1, 3)
+15:4/0 = 0
+12:6/size_in_atlas = Vector2i(3, 1)
+12:6/0 = 0
+13:7/size_in_atlas = Vector2i(3, 1)
+13:7/0 = 0
+5:7/0 = 0
+7:6/0 = 0
+6:6/0 = 0
+5:6/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+4:6/0 = 0
+4:7/0 = 0
+11:3/0 = 0
+11:2/0 = 0
+4:5/0 = 0
+8:6/0 = 0
+6:1/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+16:7/0 = 0
+17:7/0 = 0
+18:7/0 = 0
+19:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+16:8/0 = 0
+17:8/0 = 0
+18:8/0 = 0
+19:8/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_r6ln7"]
+tile_size = Vector2i(18, 18)
+physics_layer_0/collision_layer = 1
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "Grass and Dirt"
+terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+sources/0 = SubResource("TileSetAtlasSource_rhod4")
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_4qdmv"]
+distance = -136.0
+
+[sub_resource type="Animation" id="Animation_4qdmv"]
+resource_name = "move"
+length = 1.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(989, 18), Vector2(1089, 18)]
+}
+
+[sub_resource type="Animation" id="Animation_rhod4"]
+length = 9.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 7.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(17, -144), Vector2(989, -144)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_14flr"]
+_data = {
+&"RESET": SubResource("Animation_rhod4"),
+&"move": SubResource("Animation_4qdmv")
+}
+
+[node name="Level_002" instance=ExtResource("1_b5puf")]
+
+[node name="TileMap" parent="." index="2"]
+position = Vector2(-5, 2)
+tile_set = SubResource("TileSet_r6ln7")
+layer_0/tile_data = PackedInt32Array(65535, 131072, 1, 0, 131072, 1, 1, 131072, 1, 2, 131072, 1, 65534, 262144, 1, -2, 196608, 6, -65538, 196608, 6, -131074, 196608, 6, -196610, 196608, 6, -262146, 196608, 6, -327682, 196608, 6, -393218, 196608, 6, -524290, 131072, 9, 3, 65536, 9, 4, 65536, 9, 5, 65536, 9, 6, 65536, 9, 7, 65536, 9, 131070, 65536, 11, 131071, 65536, 11, 65536, 65536, 11, 65537, 65536, 11, 65538, 65536, 11, 65539, 65536, 11, 65540, 65536, 11, 65541, 65536, 11, 65542, 65536, 11, 65543, 65536, 11, 131069, 0, 11, 65533, 0, 10, -3, 0, 10, -65539, 0, 10, -131075, 0, 10, -196611, 0, 10, -262147, 0, 10, -327683, 0, 10, -393219, 0, 10, -458755, 0, 10, -524291, 0, 9, 8, 131072, 1, 9, 131072, 1, 10, 131072, 1, 11, 131072, 1, 65544, 65536, 11, 65545, 65536, 11, 65546, 65536, 11, 65547, 65536, 11, 12, 131072, 3, 13, 131072, 3, 14, 131072, 3, 15, 131072, 3, 16, 131072, 3, 17, 131072, 3, 18, 131072, 1, 19, 131072, 1, 20, 131072, 1, 21, 131072, 1, 22, 131072, 1, 23, 131072, 1, 65548, 65536, 11, 65549, 65536, 11, 65550, 65536, 11, 65551, 65536, 11, 65552, 65536, 11, 65553, 65536, 11, 65554, 65536, 11, 65555, 65536, 11, 65556, 65536, 11, 65557, 65536, 11, 65558, 65536, 11, 65559, 65536, 11, 24, 131072, 9, 65560, 131072, 11, -458754, 131072, 10, 45, 0, 9, 65581, 0, 11, 65582, 65536, 11, 65583, 65536, 11, 65584, 65536, 11, 65585, 65536, 11, 65586, 65536, 11, 65587, 65536, 11, 46, 65536, 9, 47, 65536, 9, 48, 65536, 9, 49, 65536, 9, 50, 65536, 9, 51, 65536, 9, 52, 131072, 9, 65588, 131072, 11)
+
+[node name="Coin" parent="Collectables" index="0" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3542, -738)
+
+[node name="Coin2" parent="Collectables" index="1" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3636, -740)
+
+[node name="Coin3" parent="Collectables" index="2" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3656, -738)
+
+[node name="Coin4" parent="Collectables" index="3" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3586, -810)
+
+[node name="Coin5" parent="Collectables" index="4" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3589, -785)
+
+[node name="Coin6" parent="Collectables" index="5" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3672, -844)
+
+[node name="Coin7" parent="Collectables" index="6" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3653, -844)
+
+[node name="Coin8" parent="Collectables" index="7" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3605, -805)
+
+[node name="Coin9" parent="Collectables" index="8" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3626, -844)
+
+[node name="Coin10" parent="Collectables" index="9" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3567, -786)
+
+[node name="Coin11" parent="Collectables" index="10" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3652, -780)
+
+[node name="Coin12" parent="Collectables" index="11" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3672, -780)
+
+[node name="Coin13" parent="Collectables" index="12" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3577, -760)
+
+[node name="Coin14" parent="Collectables" index="13" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3671, -760)
+
+[node name="Coin15" parent="Collectables" index="14" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3633, -762)
+
+[node name="Coin16" parent="Collectables" index="15" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3652, -761)
+
+[node name="Coin17" parent="Collectables" index="16" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3595, -763)
+
+[node name="Coin18" parent="Collectables" index="17" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3673, -802)
+
+[node name="Coin19" parent="Collectables" index="18" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3613, -764)
+
+[node name="Coin20" parent="Collectables" index="19" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3670, -823)
+
+[node name="Coin21" parent="Collectables" index="20" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3650, -823)
+
+[node name="Coin22" parent="Collectables" index="21" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3629, -823)
+
+[node name="Coin23" parent="Collectables" index="22" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3607, -823)
+
+[node name="Coin24" parent="Collectables" index="23" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3650, -802)
+
+[node name="Coin25" parent="Collectables" index="24" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3626, -802)
+
+[node name="Coin26" parent="Collectables" index="25" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3628, -782)
+
+[node name="Coin27" parent="Collectables" index="26" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3608, -786)
+
+[node name="Coin28" parent="Collectables" index="27" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3673, -739)
+
+[node name="Coin29" parent="Collectables" index="28" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3592, -741)
+
+[node name="Coin30" parent="Collectables" index="29" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3570, -741)
+
+[node name="Coin31" parent="Collectables" index="30" instance=ExtResource("3_2hbcr")]
+position = Vector2(-3615, -742)
+
+[node name="EnemySpawner" parent="Enemies" index="0" instance=ExtResource("4_1nqwv")]
+position = Vector2(302, -7)
+
+[node name="enemyGoal" parent="Enemies" index="1" instance=ExtResource("5_4qdmv")]
+position = Vector2(371, 4)
+
+[node name="enemyGoal2" parent="Enemies" index="2" instance=ExtResource("5_4qdmv")]
+position = Vector2(-3646, -695)
+
+[node name="EnemySpawner2" parent="Enemies" index="3" instance=ExtResource("4_1nqwv")]
+position = Vector2(-3678, -944)
+
+[node name="enemyGoal3" parent="Enemies" index="4" instance=ExtResource("5_4qdmv")]
+position = Vector2(-3667, -692)
+
+[node name="enemyGoal4" parent="Enemies" index="5" instance=ExtResource("5_4qdmv")]
+position = Vector2(-3575, -691)
+
+[node name="EnemySpawner3" parent="Enemies" index="6" instance=ExtResource("4_1nqwv")]
+position = Vector2(-3670, -964)
+
+[node name="EnemySpawner5" parent="Enemies" index="7" instance=ExtResource("4_1nqwv")]
+position = Vector2(-3670, -907)
+startDirection = 1
+
+[node name="enemyGoal7" parent="Enemies" index="8" instance=ExtResource("5_4qdmv")]
+position = Vector2(232, 4)
+
+[node name="enemyGoal8" parent="Enemies" index="9" instance=ExtResource("5_4qdmv")]
+position = Vector2(-3689, -695)
+
+[node name="EnemySpawner4" parent="Enemies" index="10" instance=ExtResource("4_1nqwv")]
+position = Vector2(-3671, -929)
+
+[node name="enemyGoal5" parent="Enemies" index="11" instance=ExtResource("5_4qdmv")]
+position = Vector2(-3600, -693)
+
+[node name="enemyGoal6" parent="Enemies" index="12" instance=ExtResource("5_4qdmv")]
+position = Vector2(-3622, -694)
+
+[node name="Spikes" parent="Spikes" index="0" instance=ExtResource("6_rhod4")]
+position = Vector2(-4071, -930)
+
+[node name="Spikes4" parent="Spikes" index="1" instance=ExtResource("6_rhod4")]
+position = Vector2(-3923, -927)
+
+[node name="Spikes6" parent="Spikes" index="2" instance=ExtResource("6_rhod4")]
+position = Vector2(-4110, -930)
+
+[node name="Spikes7" parent="Spikes" index="3" instance=ExtResource("6_rhod4")]
+position = Vector2(-4126, -930)
+
+[node name="Spikes8" parent="Spikes" index="4" instance=ExtResource("6_rhod4")]
+position = Vector2(-4142, -930)
+
+[node name="Spikes25" parent="Spikes" index="5" instance=ExtResource("6_rhod4")]
+position = Vector2(-3906, -926)
+
+[node name="Spikes26" parent="Spikes" index="6" instance=ExtResource("6_rhod4")]
+position = Vector2(-4035, -926)
+
+[node name="Spikes27" parent="Spikes" index="7" instance=ExtResource("6_rhod4")]
+position = Vector2(-3891, -930)
+
+[node name="Spikes28" parent="Spikes" index="8" instance=ExtResource("6_rhod4")]
+position = Vector2(-3875, -930)
+
+[node name="Spikes9" parent="Spikes" index="9" instance=ExtResource("6_rhod4")]
+position = Vector2(-3987, -911)
+rotation = 3.14159
+
+[node name="Spikes10" parent="Spikes" index="10" instance=ExtResource("6_rhod4")]
+position = Vector2(-4003, -911)
+rotation = 3.14159
+
+[node name="Spikes11" parent="Spikes" index="11" instance=ExtResource("6_rhod4")]
+position = Vector2(-4019, -911)
+rotation = 3.14159
+
+[node name="Spikes18" parent="Spikes" index="12" instance=ExtResource("6_rhod4")]
+position = Vector2(-3875, -915)
+rotation = 3.14159
+
+[node name="Spikes19" parent="Spikes" index="13" instance=ExtResource("6_rhod4")]
+position = Vector2(-3891, -915)
+rotation = 3.14159
+
+[node name="Spikes20" parent="Spikes" index="14" instance=ExtResource("6_rhod4")]
+position = Vector2(-3907, -915)
+rotation = 3.14159
+
+[node name="Spikes21" parent="Spikes" index="15" instance=ExtResource("6_rhod4")]
+position = Vector2(-3923, -915)
+rotation = 3.14159
+
+[node name="Spikes22" parent="Spikes" index="16" instance=ExtResource("6_rhod4")]
+position = Vector2(-3939, -915)
+rotation = 3.14159
+
+[node name="Spikes23" parent="Spikes" index="17" instance=ExtResource("6_rhod4")]
+position = Vector2(-3955, -915)
+rotation = 3.14159
+
+[node name="Spikes24" parent="Spikes" index="18" instance=ExtResource("6_rhod4")]
+position = Vector2(-3971, -915)
+rotation = 3.14159
+
+[node name="Spikes5" parent="Spikes" index="19" instance=ExtResource("6_rhod4")]
+position = Vector2(-3939, -927)
+
+[node name="Spikes2" parent="Spikes" index="20" instance=ExtResource("6_rhod4")]
+position = Vector2(-4089, -930)
+
+[node name="Spikes29" parent="Spikes" index="21" instance=ExtResource("6_rhod4")]
+position = Vector2(-3988, -928)
+
+[node name="Spikes30" parent="Spikes" index="22" instance=ExtResource("6_rhod4")]
+position = Vector2(-4011, -927)
+
+[node name="Spikes31" parent="Spikes" index="23" instance=ExtResource("6_rhod4")]
+position = Vector2(-4164, -930)
+
+[node name="Spikes32" parent="Spikes" index="24" instance=ExtResource("6_rhod4")]
+position = Vector2(-4183, -930)
+
+[node name="Spikes33" parent="Spikes" index="25" instance=ExtResource("6_rhod4")]
+position = Vector2(-3853, -930)
+
+[node name="Spikes12" parent="Spikes" index="26" instance=ExtResource("6_rhod4")]
+position = Vector2(-3955, -927)
+
+[node name="Spikes13" parent="Spikes" index="27" instance=ExtResource("6_rhod4")]
+position = Vector2(-3971, -926)
+
+[node name="Spikes14" parent="Spikes" index="28" instance=ExtResource("6_rhod4")]
+position = Vector2(-3860, -868)
+rotation = -1.5708
+
+[node name="Spikes34" parent="Spikes" index="29" instance=ExtResource("6_rhod4")]
+position = Vector2(-3860, -900)
+rotation = -1.5708
+
+[node name="Spikes35" parent="Spikes" index="30" instance=ExtResource("6_rhod4")]
+position = Vector2(-3860, -884)
+rotation = -1.5708
+
+[node name="Spikes15" parent="Spikes" index="31" instance=ExtResource("6_rhod4")]
+position = Vector2(-3860, -851)
+rotation = -1.5708
+
+[node name="Spikes16" parent="Spikes" index="32" instance=ExtResource("6_rhod4")]
+position = Vector2(-3842, -884)
+rotation = 1.5708
+
+[node name="Spikes17" parent="Spikes" index="33" instance=ExtResource("6_rhod4")]
+position = Vector2(-3842, -900)
+rotation = 1.5708
+
+[node name="Spikes3" parent="Spikes" index="34" instance=ExtResource("6_rhod4")]
+position = Vector2(-4053, -930)
+
+[node name="Flag" parent="." index="7"]
+position = Vector2(-34, -158)
+
+[node name="SpaceShip" parent="." index="8"]
+position = Vector2(-3384, -768)
+
+[node name="Yapışkan yüzey" type="Node2D" parent="." index="9"]
+
+[node name="Yapıs" parent="Yapışkan yüzey" index="0" instance=ExtResource("7_5o5fl")]
+position = Vector2(222, 10)
+
+[node name="Yapıs2" parent="Yapışkan yüzey" index="1" instance=ExtResource("7_5o5fl")]
+position = Vector2(242, 10)
+
+[node name="Yapıs3" parent="Yapışkan yüzey" index="2" instance=ExtResource("7_5o5fl")]
+position = Vector2(262, 10)
+
+[node name="Yapıs4" parent="Yapışkan yüzey" index="3" instance=ExtResource("7_5o5fl")]
+position = Vector2(282, 10)
+
+[node name="Yapıs5" parent="Yapışkan yüzey" index="4" instance=ExtResource("7_5o5fl")]
+position = Vector2(302, 10)
+
+[node name="Yapıs6" parent="Yapışkan yüzey" index="5" instance=ExtResource("7_5o5fl")]
+position = Vector2(310, 10)
+
+[node name="Yapısma" parent="Yapışkan yüzey" index="6" instance=ExtResource("8_2hbcr")]
+position = Vector2(202, 10)
+
+[node name="Yapısma2" parent="Yapışkan yüzey" index="7" instance=ExtResource("8_2hbcr")]
+position = Vector2(330, 10)
+
+[node name="Yapışkandan çıkar" type="Node2D" parent="." index="10"]
+
+[node name="Yapısma" parent="Yapışkandan çıkar" index="0" instance=ExtResource("8_2hbcr")]
+position = Vector2(407, 59)
+
+[node name="Tabelalar" type="Node2D" parent="." index="11"]
+
+[node name="TutorialSign" parent="Tabelalar" index="0" instance=ExtResource("9_1nqwv")]
+position = Vector2(114, 4)
+tutorial_text = "WATCH OUT!!"
+
+[node name="TutorialSign2" parent="Tabelalar" index="1" instance=ExtResource("9_1nqwv")]
+position = Vector2(158, 4)
+tutorial_text = "Soil ahead is in-    credibly sticky!"
+
+[node name="Node2D" type="Node2D" parent="." index="12"]
+
+[node name="platform" parent="Node2D" index="0" instance=ExtResource("10_4qdmv")]
+position = Vector2(630, 18)
+
+[node name="platform4" parent="Node2D" index="1" instance=ExtResource("10_4qdmv")]
+position = Vector2(1064, -144)
+
+[node name="platform2" parent="Node2D" index="2" instance=ExtResource("10_4qdmv")]
+position = Vector2(1176, -68)
+
+[node name="Area2D" type="Area2D" parent="." index="13"]
+collision_layer = 268435456
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource("WorldBoundaryShape2D_4qdmv")
+
+[node name="haraketli platform" type="Node2D" parent="." index="14"]
+
+[node name="platform2" parent="haraketli platform" index="0" instance=ExtResource("10_4qdmv")]
+position = Vector2(17, -144)
+sync_to_physics = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="haraketli platform/platform2" index="1"]
+libraries = {
+&"": SubResource("AnimationLibrary_14flr")
+}
+autoplay = "move"
+
+[node name="platform3" parent="haraketli platform" index="1" instance=ExtResource("10_4qdmv")]
+position = Vector2(17, -144)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="haraketli platform/platform3" index="1"]
+libraries = {
+&"": SubResource("AnimationLibrary_14flr")
+}
+autoplay = "RESET"
