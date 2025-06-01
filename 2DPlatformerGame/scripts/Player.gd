@@ -23,6 +23,11 @@ func _ready():
 	$DyingArea.area_entered.connect(self.on_spike_entered)
 	$Yapıs.area_entered.connect(self.on_yapıs_entered)
 	$Yapısma.area_entered.connect(self.on_yapıs_exited)
+	$"Zıpla".area_entered.connect(self.on_zıpla_entered)
+	
+	
+	
+	
 	$AnimatedSprite2D.connect("frame_changed", Callable(self, "on_animated_sprite_frame_changed"))	
 	#spike dying area
 	$DyingArea.set_collision_mask_value(31, true)
@@ -174,3 +179,6 @@ func on_yapıs_exited(area2d):
 	maxDashSpeed = 600
 	minDashSpeed = 200
 	maxSpeed=120
+	
+func on_zıpla_entered(area2d):
+	jumpSpeed=1200

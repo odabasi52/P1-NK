@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://di0h5cr8yqw65"]
+[gd_scene load_steps=26 format=3 uid="uid://di0h5cr8yqw65"]
 
 [ext_resource type="Script" uid="uid://bjboesdd68dqr" path="res://scripts/Player.gd" id="1_auknh"]
 [ext_resource type="PackedScene" uid="uid://rwujr72pywjw" path="res://scenes/Sound/random_audio_stream_player.tscn" id="2_qlg0r"]
@@ -69,6 +69,10 @@ size = Vector2(12, 17)
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a8ls1"]
 radius = 8.0
 height = 18.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qfm1y"]
+radius = 6.0
+height = 16.0
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 z_index = 10
@@ -216,3 +220,11 @@ collision_mask = 16
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Yapısma"]
 position = Vector2(0, -7)
 shape = SubResource("CapsuleShape2D_a8ls1")
+
+[node name="Zıpla" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zıpla"]
+position = Vector2(0, -6)
+shape = SubResource("CapsuleShape2D_qfm1y")

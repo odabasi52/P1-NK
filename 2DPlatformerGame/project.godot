@@ -31,6 +31,10 @@ window/size/mode=2
 window/stretch/mode="viewport"
 window/vsync/vsync_mode=0
 
+[global_group]
+
+base_level=""
+
 [gui]
 
 fonts/dynamic_fonts/use_oversampling=false
@@ -88,6 +92,7 @@ MouseClicked={
 2d_physics/layer_3="FlagWin"
 2d_physics/layer_4="Yapıs"
 2d_physics/layer_5="Yapısma"
+2d_physics/layer_6="Zıplama"
 2d_physics/layer_29="spikeDeathArea"
 2d_physics/layer_30="EnemyGoal"
 2d_physics/layer_31="enemyDeathArea"
