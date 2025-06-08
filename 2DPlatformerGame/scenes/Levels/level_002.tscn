@@ -520,6 +520,7 @@ position = Vector2(-4053, -930)
 position = Vector2(-34, -158)
 
 [node name="SpaceShip" parent="." index="8"]
+visible = false
 position = Vector2(-3384, -768)
 
 [node name="Yapışkan yüzey" type="Node2D" parent="." index="9"]

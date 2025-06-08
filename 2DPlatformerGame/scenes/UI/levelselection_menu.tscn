@@ -1,9 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://do3frygrugjae"]
+[gd_scene load_steps=12 format=3 uid="uid://do3frygrugjae"]
 
 [ext_resource type="Script" uid="uid://kyt1856cyfyv" path="res://scripts/levelselection_menu.gd" id="1_vw028"]
 [ext_resource type="Theme" uid="uid://cwcw4wt01d6y0" path="res://resource/theme.tres" id="2_sqlu2"]
 [ext_resource type="PackedScene" uid="uid://bjqnex5ce748p" path="res://scenes/UI/level_container.tscn" id="3_sqlu2"]
 [ext_resource type="PackedScene" uid="uid://c8qs28yry40um" path="res://scenes/UI/animated_button.tscn" id="3_ty2s2"]
+[ext_resource type="Texture2D" uid="uid://dgwgmggvxrbw2" path="res://resource/Levels/0.PNG" id="4_e6dfq"]
+[ext_resource type="Texture2D" uid="uid://bcl8c0issqgtc" path="res://resource/Levels/1.PNG" id="5_e2bmd"]
+[ext_resource type="Texture2D" uid="uid://djjlha48me7eh" path="res://resource/Levels/2.PNG" id="6_3b184"]
+[ext_resource type="Texture2D" uid="uid://ba4ee241ts5gd" path="res://resource/Levels/3.PNG" id="7_oogha"]
 
 [sub_resource type="Animation" id="Animation_feath"]
 length = 0.001
@@ -42,23 +46,6 @@ _data = {
 &"RESET": SubResource("Animation_feath"),
 &"default": SubResource("Animation_mko1u")
 }
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ty2s2"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0nsn0"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e6dfq"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e2bmd"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3b184"]
-
-[sub_resource type="Theme" id="Theme_oogha"]
-HScrollBar/styles/grabber = SubResource("StyleBoxEmpty_ty2s2")
-HScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_0nsn0")
-HScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_e6dfq")
-HScrollBar/styles/scroll = SubResource("StyleBoxEmpty_e2bmd")
-HScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_3b184")
 
 [node name="LevelSelection" type="CanvasLayer"]
 script = ExtResource("1_vw028")
@@ -101,23 +88,32 @@ layout_mode = 2
 text = "LEVELS"
 horizontal_alignment = 1
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme = SubResource("Theme_oogha")
-vertical_scroll_mode = 0
-
-[node name="Levels" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer"]
+[node name="Levels" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="LevelContainer2" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/Levels" instance=ExtResource("3_sqlu2")]
+[node name="LevelContainer2" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Levels" instance=ExtResource("3_sqlu2")]
 layout_mode = 2
 labelText = "Tutorial"
+texture = ExtResource("4_e6dfq")
 
-[node name="LevelContainer3" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/Levels" instance=ExtResource("3_sqlu2")]
+[node name="LevelContainer3" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Levels" instance=ExtResource("3_sqlu2")]
 layout_mode = 2
 labelText = "Level 1"
+texture = ExtResource("5_e2bmd")
 levelNumber = 1
+
+[node name="LevelContainer4" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Levels" instance=ExtResource("3_sqlu2")]
+layout_mode = 2
+labelText = "Level 2"
+texture = ExtResource("6_3b184")
+levelNumber = 2
+
+[node name="LevelContainer5" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Levels" instance=ExtResource("3_sqlu2")]
+layout_mode = 2
+labelText = "Final"
+texture = ExtResource("7_oogha")
+levelNumber = 3
 
 [node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
