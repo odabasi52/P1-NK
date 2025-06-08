@@ -22,7 +22,7 @@ var isStateNew = true
 func _ready():
 	$DyingArea.area_entered.connect(self.on_spike_entered)
 	$Yapıs.area_entered.connect(self.on_yapıs_entered)
-	$Yapısma.area_entered.connect(self.on_yapıs_exited)
+	$Yapısma.area_exited.connect(self.on_yapıs_exited)
 	$"Zıpla".area_entered.connect(self.on_zıpla_entered)
 	
 	

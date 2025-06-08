@@ -222,6 +222,7 @@ texture_region_size = Vector2i(18, 18)
 11:7/0 = 0
 12:7/0 = 0
 16:7/0 = 0
+16:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 17:7/0 = 0
 18:7/0 = 0
 19:7/0 = 0
@@ -517,13 +518,13 @@ position = Vector2(2381, -156)
 [node name="Yapışmadan çık" type="Node2D" parent="."]
 
 [node name="Yapısma" parent="Yapışmadan çık" instance=ExtResource("13_7228c")]
-position = Vector2(164, 7)
+position = Vector2(150, 7)
 
 [node name="Yapısma2" parent="Yapışmadan çık" instance=ExtResource("13_7228c")]
-position = Vector2(-65, 7)
+position = Vector2(-51, 7)
 
 [node name="Yapısma3" parent="Yapışmadan çık" instance=ExtResource("13_7228c")]
-position = Vector2(-79, 7)
+position = Vector2(-35, 89)
 
 [node name="Zıplama" parent="Yapışmadan çık" instance=ExtResource("14_ncgxh")]
 position = Vector2(-2497, 681)
@@ -532,13 +533,13 @@ position = Vector2(-2497, 681)
 position = Vector2(-2481, 681)
 
 [node name="Yapısma4" parent="Yapışmadan çık" instance=ExtResource("13_7228c")]
-position = Vector2(617, 2)
+position = Vector2(609, 2)
 
 [node name="Yapısma5" parent="Yapışmadan çık" instance=ExtResource("13_7228c")]
-position = Vector2(2342, -156)
+position = Vector2(2351, -156)
 
 [node name="Yapısma6" parent="Yapışmadan çık" instance=ExtResource("13_7228c")]
-position = Vector2(2418, -156)
+position = Vector2(2402, -156)
 
 [node name="Spikes" type="Node2D" parent="."]
 z_index = -1

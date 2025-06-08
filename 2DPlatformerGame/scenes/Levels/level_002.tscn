@@ -525,43 +525,43 @@ position = Vector2(-3384, -768)
 [node name="Yapışkan yüzey" type="Node2D" parent="." index="9"]
 
 [node name="Yapıs" parent="Yapışkan yüzey" index="0" instance=ExtResource("7_5o5fl")]
-position = Vector2(222, 10)
+position = Vector2(259, 78)
 
 [node name="Yapıs2" parent="Yapışkan yüzey" index="1" instance=ExtResource("7_5o5fl")]
-position = Vector2(242, 10)
+position = Vector2(239, 8)
 
 [node name="Yapıs3" parent="Yapışkan yüzey" index="2" instance=ExtResource("7_5o5fl")]
-position = Vector2(262, 10)
+position = Vector2(257, 8)
 
 [node name="Yapıs4" parent="Yapışkan yüzey" index="3" instance=ExtResource("7_5o5fl")]
-position = Vector2(282, 10)
+position = Vector2(276, 8)
 
 [node name="Yapıs5" parent="Yapışkan yüzey" index="4" instance=ExtResource("7_5o5fl")]
-position = Vector2(302, 10)
+position = Vector2(296, 8)
 
 [node name="Yapıs6" parent="Yapışkan yüzey" index="5" instance=ExtResource("7_5o5fl")]
-position = Vector2(310, 10)
+position = Vector2(365, 95)
 
 [node name="Yapıs7" parent="Yapışkan yüzey" index="6" instance=ExtResource("7_5o5fl")]
-position = Vector2(833, 6)
+position = Vector2(840, 6)
 
 [node name="Yapıs8" parent="Yapışkan yüzey" index="7" instance=ExtResource("7_5o5fl")]
-position = Vector2(853, 6)
+position = Vector2(860, 6)
 
 [node name="Yapısma" parent="Yapışkan yüzey" index="8" instance=ExtResource("8_2hbcr")]
-position = Vector2(942, 6)
+position = Vector2(939, 6)
 
 [node name="Yapıs9" parent="Yapışkan yüzey" index="9" instance=ExtResource("7_5o5fl")]
-position = Vector2(873, 6)
+position = Vector2(880, 6)
 
 [node name="Yapıs10" parent="Yapışkan yüzey" index="10" instance=ExtResource("7_5o5fl")]
-position = Vector2(893, 6)
+position = Vector2(900, 6)
 
 [node name="Yapıs11" parent="Yapışkan yüzey" index="11" instance=ExtResource("7_5o5fl")]
-position = Vector2(913, 6)
+position = Vector2(920, 6)
 
 [node name="Yapıs12" parent="Yapışkan yüzey" index="12" instance=ExtResource("7_5o5fl")]
-position = Vector2(922, 6)
+position = Vector2(921, 97)
 
 [node name="Yapışkandan çıkar" type="Node2D" parent="." index="10"]
 
@@ -569,13 +569,16 @@ position = Vector2(922, 6)
 position = Vector2(407, 59)
 
 [node name="Yapısma3" parent="Yapışkandan çıkar" index="1" instance=ExtResource("8_2hbcr")]
-position = Vector2(202, 10)
+position = Vector2(220, 8)
 
 [node name="Yapısma2" parent="Yapışkandan çıkar" index="2" instance=ExtResource("8_2hbcr")]
-position = Vector2(330, 10)
+position = Vector2(309, 8)
 
 [node name="Yapısma4" parent="Yapışkandan çıkar" index="3" instance=ExtResource("8_2hbcr")]
-position = Vector2(813, 6)
+position = Vector2(822, 6)
+
+[node name="Yapıs" parent="Yapışkandan çıkar" index="4" instance=ExtResource("7_5o5fl")]
+position = Vector2(816, 6)
 
 [node name="Tabelalar" type="Node2D" parent="." index="11"]
 
