@@ -1,6 +1,6 @@
 # P1-NK
 
-![alt text](Poster/POSTER.png)
+![alt text](Poster/NEW_POSTER.png)
 
 
 P1-NK, her yaştan kullanıcıya nostaljik bir platformer macerası sunmak ve özgün piksel tasarımlarıyla görsel bir şölen yaşatmak üzere özenle tasarlanmıştır.
